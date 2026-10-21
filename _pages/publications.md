@@ -14,7 +14,6 @@ nav_order: 2
 
 <span style="font-family:monospace;">
 Peer-Reviewed Publications, Book Chapters, Patents 
-<br> (<a href="https://scholar.google.com/citations?user=msjXTH4AAAAJ&hl=en" title="Google Scholar">Google Scholar <i class="ai ai-google-scholar"></i></a>)
 </span>
 
 <br>

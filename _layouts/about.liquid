@@ -2,116 +2,54 @@
 layout: default
 ---
 <div class="about-page">
-  <div class="row about-row{% if page.profile.align == 'right' %} about-row-reversed{% endif %}">
-    <div class="col-md-4 about-sidebar-col">
-      <div class="about-sidebar">
-        {% if page.profile %}
-          <div class="about-sidebar-header">
-            {% if page.profile.image %}
-              {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-              {% if page.profile.image_circular %}
-                {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-              {% else %}
-                {% assign profile_image_class = 'img-fluid rounded about-profile-wide' %}
-              {% endif %}
-              {% if page.profile.image_dark %}
-                {% assign profile_image_dark_path = page.profile.image_dark | prepend: 'assets/img/' %}
-                <div class="about-profile-light">
-                  {%
-                    include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt=page.profile.image
-                    cache_bust=true
-                  %}
-                </div>
-                <div class="about-profile-dark">
-                  {%
-                    include figure.liquid loading="eager" path=profile_image_dark_path class=profile_image_class alt=page.profile.image_dark
-                    cache_bust=true
-                  %}
-                </div>
-              {% else %}
-                {%
-                  include figure.liquid loading="eager" path=profile_image_path class=profile_image_class alt=page.profile.image
-                  cache_bust=true
-                %}
-              {% endif %}
-            {% endif %}
-
-            <div class="about-sidebar-header-text">
-              <h1 class="about-name">
-                {% if site.title == 'blank' %}
-                  <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-                  {{ site.last_name }}
-                {% else %}
-                  {{ site.title }}
-                {% endif %}
-              </h1>
-              {% if page.subtitle %}<p class="about-subtitle">{{ page.subtitle }}</p>{% endif %}
-
-              {% if page.profile.more_info %}
-                <div class="address d-none d-md-block">
-                  {{ page.profile.more_info }}
-                </div>
-              {% endif %}
-
-              <div class="about-sidebar-contact">
-                {% if page.profile.more_info %}
-                  <details class="address-toggle d-md-none">
-                    <summary aria-label="Show contact details"><i class="fa-solid fa-chevron-down"></i></summary>
-                    <div class="address">
-                      {{ page.profile.more_info }}
-                    </div>
-                  </details>
-                {% endif %}
-
-                <!-- Social -->
-                {% if page.social %}
-                  <div class="social">
-                    <div class="contact-icons">{% include social.liquid %}</div>
-
-                    <div class="contact-note">{{ site.contact_note }}</div>
-                  </div>
-                {% endif %}
-              </div>
-            </div>
-          </div>
+  {% if page.hero %}
+    <header class="about-hero">
+      {% if page.hero.image %}
+        <img
+          src="{{ page.hero.image | prepend: 'assets/img/' | relative_url }}"
+          alt="{{ site.title }}"
+          class="{% if page.hero.image_dark %}logo-light{% endif %}"
+          loading="eager"
+        >
+        {% if page.hero.image_dark %}
+          <img src="{{ page.hero.image_dark | prepend: 'assets/img/' | relative_url }}" alt="{{ site.title }}" class="logo-dark" loading="eager">
         {% endif %}
-      </div>
-    </div>
+      {% endif %}
+      {% if page.hero.tagline %}<p class="about-tagline">{{ page.hero.tagline }}</p>{% endif %}
+    </header>
+  {% endif %}
 
-    <div class="col-md-8 about-main-col">
-      <article class="about-main">
-        <div class="clearfix">{{ content }}</div>
+  <article class="about-main">
+    <div class="clearfix">{{ content }}</div>
 
-        <!-- Latest posts -->
-        {% if page.latest_posts %}
-          <h2>
-            <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Events</a>
-          </h2>
-          {% include latest_posts.liquid %}
-          <br>
-        {% endif %}
+    <!-- Latest posts -->
+    {% if page.latest_posts %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Events</a>
+      </h2>
+      {% include latest_posts.liquid %}
+      <br>
+    {% endif %}
 
-        <!-- News -->
-        {% if page.news %}
-          <h2>
-            <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-          </h2>
-          {% include news.liquid %}
-          <div class="news-spacer"></div>
-        {% endif %}
+    <!-- News -->
+    {% if page.news %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+      </h2>
+      {% include news.liquid %}
+      <div class="news-spacer"></div>
+    {% endif %}
 
-        <!-- Selected papers -->
-        {% if page.selected_papers %}
-          <h2>
-            <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-          </h2>
-          {% include selected_papers.liquid %}
-        {% endif %}
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
 
-        {% if site.newsletter.enabled and site.footer_fixed %}
-          {% include scripts/newsletter.liquid center=true %}
-        {% endif %}
-      </article>
-    </div>
-  </div>
+    {% if site.newsletter.enabled and site.footer_fixed %}
+      {% include scripts/newsletter.liquid center=true %}
+    {% endif %}
+  </article>
 </div>

@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Research
-stitle: Research
+title: Projects
+stitle: Projects
 permalink: /projects/
 description:
-nav: true
-nav_order: 1
+nav: false
 sections:
   - title: Hybrid Learning
     projects: [hybrid-learning]

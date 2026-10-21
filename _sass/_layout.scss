@@ -24,6 +24,11 @@ body.fixed-top-nav {
   padding-top: 56px;
 }
 
+// Taller navbar when it carries the logo strip
+body.fixed-top-nav:has(.navbar-brand-strip) {
+  padding-top: 84px;
+}
+
 body.sticky-bottom-footer {
   // Remove padding below footer.
   padding-bottom: 0;

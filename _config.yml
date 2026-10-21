@@ -2,22 +2,25 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: Christos 
+title: learnCPS # the website title (if blank, full name will be used instead)
+first_name: learnCPS 
 middle_name: 
-last_name: Mavridis
+last_name: 
 email:
 description: >
-  Research Portfolio, Christos Mavridis, TU Wien.
+  learnCPS lab, TU Wien Informatics. Learning, optimization, and control for intelligent Cyber-Physical-Human Systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website, Christos, Mavridis, UMD, KTH, PhD, John, Baras, Kostas, Kyriakopoulos, Karl, Henrik, Johansson  # add your own keywords or leave empty
+keywords: learnCPS, research lab, TU Wien, Informatics, cyber-physical systems, learning, optimization, control, robotics, Christos Mavridis  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: profile_pic.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: learnCPS.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+logo: /assets/img/learnCPS-full-transparent.png # lab logo shown in the navbar (light mode)
+logo_dark: /assets/img/learnCPS-full-night-transparent.png # lab logo shown in the navbar (dark mode)
+logo_tagline: Learning for Cyber-Physical-Systems &middot; TU Wien # shown under the navbar logo; remove to go back to a plain navbar
 
-url: https://MavridisChristos.github.io # the base hostname & protocol for your site
+url: https://learncps.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR

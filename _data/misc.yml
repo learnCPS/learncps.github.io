@@ -1,4 +1,9 @@
 
+- title: Tools
+  type: time_table
+  contents:
+    - title: <a href="/publication-planner/">Publication Planner</a> 
+
 - title: Open Source Projects
   type: time_table
   contents:
@@ -11,13 +16,6 @@
     - title: <a href="https://github.com/MavridisChristos/BiosignalAcquisition">Real-time EEG signal acquisition and processing</a>
       # year: EEG
       description: A Bash/C++ interface for real-time EEG signal acquisition and processing for the BioSemi Active II device.
-
-
-- title: Resources
-  type: time_table
-  contents:
-    - title: <a href="/cv/">My CV</a>
-    - title: <a href="/publication-planner/">Publication Planner</a> 
 
 - title: Some thoughts on academic life and research
   type: time_table

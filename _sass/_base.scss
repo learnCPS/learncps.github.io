@@ -225,221 +225,268 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-theme-color);
 }
 
-// About page (academicpages-style sidebar)
-
+// About page: single column with a hero graphic on top
 .news-spacer {
   margin-bottom: 2.5rem;
 }
 
-.about-row {
-  display: flex;
-  flex-wrap: wrap;
-}
+// Hero strip: full-bleed band behind the logo, flush with the navbar.
+// The -3rem top margin cancels the page container's mt-5; the box-shadow +
+// clip-path pair extends the background edge to edge without overflowing.
+.about-hero {
+  // pale tint of the logo's "learn" blue
+  --about-hero-bg: #edf3f9;
 
-.about-row-reversed {
-  flex-direction: row-reverse;
-}
-
-.about-sidebar-col {
-  margin-bottom: 2rem;
-}
-
-// Mobile-first: compact horizontal header (avatar beside name/bio),
-// matching academicpages' collapsed mobile sidebar.
-.about-sidebar {
-  text-align: left;
-}
-
-.about-sidebar-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin: -3rem 0 2.5rem;
+  padding: 1.75rem 0 1.5rem;
+  background: var(--about-hero-bg);
+  box-shadow: 0 0 0 100vmax var(--about-hero-bg);
+  clip-path: inset(0 -100vmax);
 
   img {
-    max-width: 64px;
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-    flex-shrink: 0;
-
-    // Non-circular profile image (e.g. a wide logo): keep its aspect ratio
-    &.about-profile-wide {
-      width: 120px;
-      max-width: 120px;
-      height: auto;
-      object-fit: contain;
-    }
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
-// Profile image with a dark-mode variant (profile.image_dark)
-.about-profile-dark {
-  display: none;
-}
+html[data-theme="dark"] .about-hero {
+  // deep navy, a muted take on the logo's "CPS" blue
+  --about-hero-bg: #12233a;
 
-html[data-theme="dark"] {
-  .about-profile-light {
-    display: none;
-  }
-
-  .about-profile-dark {
-    display: block;
+  .about-tagline {
+    color: #b8cbe0;
   }
 }
 
-.about-sidebar-header-text {
-  min-width: 0;
-}
-
-.about-name {
-  font-size: 1.1rem;
-  margin: 0;
-  line-height: 1.3;
-}
-
-.about-subtitle {
-  font-size: 0.8rem;
+.about-tagline {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 1.15rem;
   color: var(--global-text-color-light);
   margin: 0;
 }
 
-// Mobile: address info is tucked behind a discreet clickable disclosure
-// (an icon only, no label), sitting on the same row as the social icons.
-.about-sidebar-contact {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 0.5rem 0.85rem;
-  margin-top: 0.6rem;
-
-  .social {
-    order: -1;
-    flex: 0 0 auto;
+@media (max-width: 576px) {
+  .about-hero {
+    margin: -3rem 0 2rem;
+    padding: 1.25rem 0 1rem;
   }
 
-  .address-toggle {
-    flex: 0 0 auto;
-    min-width: 0;
+  .about-tagline {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+}
 
-    &[open] {
-      flex-basis: 100%;
+// Home page: message from the PI (photo on the left, quote on the right)
+.pi-message {
+  margin: 1rem 0 3rem;
+
+  blockquote {
+    margin: 0 0 0.75rem;
+    padding: 0;
+    text-align: center;
+    border: none;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--global-text-color);
+
+    // Matching opening and closing marks: same face, size, and colour
+    // line-height: 0 keeps the large glyphs from stretching the lines
+    &::before,
+    &::after {
+      font-size: 2.25rem;
+      font-style: normal;
+      line-height: 0;
+      vertical-align: -0.8rem;
+      color: var(--global-theme-color);
+      opacity: 0.6;
+    }
+
+    &::before {
+      content: "\201C";
+      margin-right: 0.1rem;
+    }
+
+    &::after {
+      content: "\201D";
+      margin-left: 0.1rem;
+    }
+  }
+
+  // Signature: small avatar right before the name and role
+  figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.35;
+
+    .pi-message-photo {
+      flex-shrink: 0;
+
+      img {
+        width: 44px;
+        height: 44px;
+        object-fit: cover;
+      }
+    }
+
+    a {
+      font-weight: 600;
+    }
+
+    .pi-message-role {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--global-text-color-light);
     }
   }
 }
 
-.address-toggle {
-  summary {
-    cursor: pointer;
-    list-style: none;
-    color: var(--global-text-color-light);
-    width: 1.5rem;
+@media (max-width: 576px) {
+  .pi-message {
+    text-align: center;
 
-    &::-webkit-details-marker,
-    &::marker {
-      display: none;
-      content: "";
+    blockquote {
+      font-size: 1.05rem;
+
+      &::before,
+      &::after {
+        font-size: 1.5rem;
+        vertical-align: -0.5rem;
+      }
     }
 
-    i {
-      font-size: 0.7rem;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    &:hover {
-      color: var(--global-theme-color);
+    figcaption {
+      text-align: left;
     }
   }
+}
 
-  &[open] summary i {
+// People page: PI card with a "Bio" toggle and a copyable bio panel
+.pi-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .pi-info-text {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.pi-bio-toggle {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--global-theme-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover,
+  &[aria-expanded="true"] {
+    background: var(--global-theme-color);
+    color: var(--global-bg-color);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  .pi-bio-chevron {
+    font-size: 0.75em;
+    transition: transform 0.25s ease;
+  }
+
+  &[aria-expanded="true"] .pi-bio-chevron {
     transform: rotate(180deg);
   }
 }
 
-.about-sidebar {
-  .address {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-size: 0.7rem;
-    text-align: left;
+// Collapsible panel: animates height via grid rows (0fr -> 1fr)
+.pi-bio {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
 
-    p {
-      display: block;
-      margin: 0;
-    }
+  .pi-bio-inner {
+    overflow: hidden;
+    // hidden after the collapse animation so closed content is not focusable
+    visibility: hidden;
+    transition: visibility 0s linear 0.3s;
   }
 
-  .address-email {
-    font-size: 0.85em;
-    color: var(--global-text-color-light);
-  }
+  &.open {
+    grid-template-rows: 1fr;
 
-  .social {
-    text-align: left;
-
-    .contact-icons {
-      font-size: 1.5rem;
+    .pi-bio-inner {
+      visibility: visible;
+      transition-delay: 0s;
     }
   }
 }
 
-// Desktop: expand to the large centered vertical profile card.
-@media (min-width: 768px) {
-  .about-sidebar {
+.pi-bio-box {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem 0.35rem;
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 0.4rem;
+  background: var(--global-code-bg-color);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: justify;
+
+  p {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.pi-bio-copy {
+  float: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: -0.25rem -0.35rem 0.5rem 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  background: var(--global-bg-color);
+  color: var(--global-text-color-light);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover,
+  &.copied {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+}
+
+// Phones: info and photo stack centred; the Bio button goes under the info
+@media (max-width: 575.98px) {
+  .pi-info {
+    flex-direction: column;
     text-align: center;
-    position: sticky;
-    top: 76px;
-    max-height: calc(100vh - 96px);
-    overflow-y: auto;
-  }
-
-  .about-sidebar-header {
-    display: block;
-    margin-bottom: 0;
-
-    img {
-      max-width: 150px;
-      width: 100%;
-      height: auto;
-      margin: 0 auto 1rem;
-
-      &.about-profile-wide {
-        max-width: 220px;
-        width: 100%;
-      }
-    }
-  }
-
-  // Only .social remains visible here (the disclosure is d-md-none);
-  // drop the flex row so its own text-align: center takes effect.
-  .about-sidebar-contact {
-    display: block;
-  }
-
-  .about-name {
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .about-subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .about-sidebar .address {
-    font-size: 0.75rem;
-    text-align: center;
-  }
-
-  .about-sidebar .social {
-    text-align: center;
-
-    .contact-icons {
-      font-size: 1.7rem;
-    }
   }
 }
 
@@ -464,6 +511,53 @@ html[data-theme="dark"] {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+}
+
+// Navbar as the logo strip (enabled by site.logo_tagline)
+.navbar:has(.navbar-brand-strip) {
+  background-color: #edf3f9;
+  border-bottom: none;
+}
+
+html[data-theme="dark"] .navbar:has(.navbar-brand-strip) {
+  background-color: #12233a;
+}
+
+.navbar .navbar-brand-strip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.35rem 0;
+  line-height: 1;
+
+  .navbar-logo {
+    height: 2.75rem;
+  }
+
+  .navbar-tagline {
+    font-variant: small-caps;
+    letter-spacing: 0.06em;
+    font-size: 0.68rem;
+    color: var(--global-text-color-light);
+    margin-top: 0.1rem;
+  }
+}
+
+html[data-theme="dark"] .navbar-brand-strip .navbar-tagline {
+  color: #b8cbe0;
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-brand-strip {
+    .navbar-logo {
+      height: 2.25rem;
+    }
+
+    .navbar-tagline {
+      font-size: 0.58rem;
+      letter-spacing: 0.03em;
+    }
+  }
 }
 
 .navbar .dropdown-menu {
@@ -509,6 +603,12 @@ html[data-theme="dark"] {
     &:hover {
       color: var(--global-hover-color);
     }
+  }
+
+  .navbar-brand .navbar-logo {
+    height: 2rem;
+    width: auto;
+    vertical-align: middle;
   }
 
   .navbar-nav .nav-item .nav-link .nav-logo {

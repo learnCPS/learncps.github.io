@@ -4,8 +4,7 @@ title: Teaching
 stitle: Teaching
 permalink: /teaching/
 description:
-nav: true
-nav_order: 3
+nav: false
 ---
 
 <div class="card mt-3 p-3">
@@ -29,5 +28,5 @@ nav_order: 3
 <br>
 
 <p class="mt-3">
-  For more information visit <a href="https://informatics.tuwien.ac.at/people/christos-mavridis" target="_blank" rel="noopener noreferrer">my TU Wien page</a>.
+  For more information visit the <a href="https://informatics.tuwien.ac.at/orgs/e191-01" target="_blank" rel="noopener noreferrer">Cyber-Physical Systems Research Unit at TU Wien Informatics</a>.
 </p>
