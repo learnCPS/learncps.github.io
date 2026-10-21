@@ -129,6 +129,31 @@
       </div>
     </div>
   </nav>
+  <script>
+    // Expand the navbar whenever all items fit on one row; otherwise keep the
+    // collapsed (hamburger) menu. The navbar-expand-lg class in the markup is
+    // the fallback when JavaScript is unavailable.
+    (function () {
+      var nav = document.getElementById("navbar");
+      if (!nav) return;
+      var container = nav.querySelector(".container");
+      function fit() {
+        nav.classList.remove("navbar-expand-lg");
+        nav.classList.add("navbar-expand-sm");
+        // The nav list is nowrap, so items that do not fit overflow the container
+        if (container.scrollWidth > container.clientWidth + 1) {
+          nav.classList.remove("navbar-expand-sm");
+        }
+      }
+      fit();
+      window.addEventListener("resize", fit);
+      window.addEventListener("load", fit);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+      nav.querySelectorAll("img").forEach(function (img) {
+        if (!img.complete) img.addEventListener("load", fit);
+      });
+    })();
+  </script>
   {% if site.enable_progressbar %}
     <!-- Scrolling Progress Bar -->
     <progress id="progress" value="0">
