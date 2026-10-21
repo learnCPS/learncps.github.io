@@ -1,0 +1,171 @@
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D., Electrical Engineering
+      institution: University of Maryland, College Park
+      year: 2021
+      description:
+        - Thesis &mdash; "Learning Latent Representations and Intrinsic Laws of Complex Systems"
+    - title: M.Sc., Electrical Engineering
+      institution: University of Maryland, College Park
+      year: 2021
+    - title: B.Sc., Electrical and Computer Engineering (5-year Diploma)
+      institution: National Technical University of Athens, Greece
+      year: 2017
+      description:
+        - Thesis &mdash; "EEG and EMG Signals in Neuro-Robotic Systems"
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Assistant Professor, TU Wien
+      institution: Faculty of Informatics
+      year: 2026 - now
+    - title: Postdoc, KTH Royal Institute of Technology
+      institution: Division of Decision and Control Systems
+      year: 2023 - 2026
+      description:
+        - Advisor &mdash; <a target="_blank" rel="noopener noreferrer" href="https://people.kth.se/~kallej/"> Karl Henrik Johansson</a>
+    - title: Research Affiliate, Ericsson AB
+      institution: Ericsson Research, Stockholm
+      year: 2024 - 2025
+      description:
+        - Joint Research Project (SSF IPD23-0019)
+    - title: Postdoc, University of Maryland
+      institution: Institute for Systems Research
+      year: 2022-2023
+      description:
+        - Advisor &mdash; <a target="_blank" rel="noopener noreferrer" href="https://ece.umd.edu/clark/faculty/357/John-S-Baras"> John S. Baras</a>
+    - title: Research Scientist Intern, Xerox PARC
+      institution: System Sciences Lab, Palo Alto Research Center (PARC)
+      year: 2019
+      description:
+        - Supervisors &mdash; Ion Matei and Johan de Kleer
+    - title: Research Scientist Intern, Bell Labs
+      institution: Math & Algorithms Research Group, Nokia Bell Labs
+      year: 2018
+      description:
+        - Supervisor &mdash; Iraj Saniee
+    - title: Undergraduate Research Assistant, NTUA
+      institution: Control Systems Lab, Mechanical Eng. Dept.
+      year: 2015-2017
+      description:
+        - Advisor &mdash; <a target="_blank" rel="noopener noreferrer" href="http://www.controlsystemslab.gr/kkyria/"> Kostas J. Kyriakopoulos</a>
+
+- title: Funded Projects
+  type: time_table
+  contents:
+    - title: SSF IPD23-0019  [2-year, 2.2 MSEK]
+      institution: Funded from the Swedish Foundation for Strategic Research and Ericsson AB 
+      year: 2024
+      description:
+        - PI &mdash; Christos Mavridis
+        - Project Scope &mdash; "Hierarchical Communication-Aware Motion Planning"
+        - Collaboration with KTH Royal Institute of Technology and Ericsson AB
+    - title: VINNOVA 6G - International Research and Innovation Cooperation 2025-01681  [2-year, 3 MSEK]
+      institution: Funded from VINNOVA 
+      year: 2025
+      description:
+        - Coordinator &mdash; Ericsson Research
+        - Project Scope &mdash; "Trustworthy 6G Positioning in Complex Environments. A Data-Driven Approach"
+        - Collaboration with KTH Royal Institute of Technology, Nanyang Technological University, Singapore, and
+          Ericsson AB.
+
+
+- title: Invited Talks
+  type: time_table
+  contents:
+
+    - year: 2026
+      items:
+        - <b>Imperial College London</b>, Hybrid Intelligence for Cyber-Physical-Human Systems.
+    - year: 2025
+      items:
+        - <b>TU Wien</b>, Hybrid Intelligence for Cyber-Physical-Human Systems.
+        - <b>Tutorial Session, European Control Conference 2025</b>, Homotopy Optimization and Hybrid Learning for Inference and Control. 
+        - <b>Politecnico di Milano (PoliMi)</b>, Real-Time Hybrid System Identification and Learning-based Control. 
+    - year: 2024
+      items:
+        - <b>Ocado Intelligent Automation, Stockholm</b>, Hybrid Intelligence in Control and Automation.
+        - <b>ATHENA Research Center, Greece</b>, Real-time Hybrid System Identification for CPS Security and Control. 
+        - <b>Uppsala University, Sweden</b>, Real-time Hybrid System Identification for CPS Security and Control.
+    - year: 2023
+      items: 
+        - <b>IMDEA Software, Madrid</b>, Progressive Learning for Inference, Verification, and Control of Cyber-Physical Systems.
+        - <b>ECSE, RPI</b>, Progressive Learning for Inference and Control in Cyber-Physical Systems.
+    - year: 2022
+      items: 
+        - <b>MINDS, Johns Hopkins</b>, Online Deterministic Annealing. Progressive Learning for Cyber-Physical Systems.
+        - <b>KTH, Stockholm</b>, Progressive Learning for Inference and Control in Cyber-Physical Systems.
+        - <b>ESE, UPenn</b>, Dynamic Learning for Intelligent Autonomous Systems.
+        - <b>ECE, Rutgers</b>, Dynamic Learning for Intelligent Autonomous Systems.
+    - year: 2021
+      items: 
+        - <b>Maryland Robotics Center, UMD</b>, Learning Latent Representations and Intrinsic Laws of Complex Systems.
+
+- title: Professional Service
+  type: time_table
+  contents:
+    - year: 2024
+      items: 
+        - Organizer, ACC 2024 Student Workshop on Security and Privacy of the Next-Generation Cyber-Physical Systems, IEEE Technical Committee on Security and Privacy
+        - Co-Chair, 'Identification I', IEEE ECC 2024
+        - Co-Chair, 'Optimization II', MED 2024
+        - Keynote Chair, Organizing Committee, Digital Futures Young Scientist Conference, Stockholm, Sweden 
+    - year: 2023
+      items: 
+        - NSF Proposal Review Panellist, ENG/ECCS, 2023
+    - year: 2022
+      items: 
+        - Co-Chair, 'Learning', IEEE CDC 2022
+        - Co-Chair, 'Intelligent Data Processing From Sensors in Control and Decision Support Systems', MED 2022
+    - items: 
+        - Associate Editor, EUCA Conference Editorial Board, European Control Conference (ECC), 2024-2028.
+        - Journal Peer Reviewing &mdash; [TACON, Automatica, TCNS, DCDS-B], [NAHS] 
+        - Conference Peer Reviewing &mdash; [CDC, ACC, ECC, MED], [ADHS], [ICRA, IROS], [ITSC]
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2021
+      items:
+        - <a target="_blank" rel="noopener noreferrer" href="/assets/pdf/ITSC2021-BestStudentPaperAward-FirstPlace.pdf">Best Student Paper Award (1st place), IEEE ITSC</a>
+        - ISR Outstanding Systems Engineering Graduate Student Award, UMD
+        - Ann G. Wylie Dissertation Fellowship [$15,000], UMD
+        - Future Faculty Program Fellowship, A. James Clark School of Engineering, UMD
+    - year: 2020
+      items:
+        - Graduate School's Outstanding Research Assistant Award, A. James Clark School of Engineering, UMD
+    - year: 2018
+      items:
+        - Qualcomm Innovation Fellowship US Finalist, San Diego, CA
+        - Gerontelis Foundation Scholarship [$5,000], MA
+    - year: 2017
+      items:
+        - A. James Clark School of Engineering Distinguished Graduate Fellowship [$15,000], UMD
+    - year: 2010
+      items:
+        - Great Moment for Education student excellence award [1,000&#x20AC], EFG Eurobank, Greece 
+
+- title: Patents
+  type: time_table
+  contents:
+    - year: 2019
+      items: 
+        - Patent No. US 11,188,617 B2; Method and network node for internet-of-things (IoT) feature selection for storage and computation; Nokia Technologies Oy.
+    - description: Five (5) filed inventions with Telefonaktiebolaget LM Ericsson.
+
+- title: External Engagement
+  type: time_table
+  contents:
+    - title: eProgramma AB (e-programma)
+      institution: Founder, CEO, Research & Development
+      year: 2025 - now
+      description:
+        - Software service company providing scheduling solutions for educational institutions.
+        - Supported by <a target="_blank" rel="noopener noreferrer" href="https://www.kth.se/en/om/innovation/program-extra-stod/launch/bolag/batch-20/e-programma-1.1381438">KTH Innovation</a>
+        - Funded by Vinnova Swedish Agency for Innovation Systems.
+        - Website &mdash; <a target="_blank" rel="noopener noreferrer" href="https://eprogramma.com">eprogramma.com</a>
+
+ 

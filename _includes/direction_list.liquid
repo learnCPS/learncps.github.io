@@ -1,0 +1,32 @@
+{%- assign items = site.data[include.data_key] -%}
+{%- assign directions = items | map: "direction" | uniq -%}
+
+<div class="cal-filter-group">
+
+<div class="cal-filters" role="group" aria-label="Filter by research direction">
+  <button type="button" class="cal-filter active" data-filter="all">All</button>
+  {%- for direction in directions %}
+  <button type="button" class="cal-filter" data-filter="{{ direction | slugify }}">{{ direction }}</button>
+  {%- endfor %}
+</div>
+
+<div class="conf-list-wrap">
+  {%- for direction in directions %}
+  {%- assign items_in_direction = items | where: "direction", direction -%}
+  <div class="conf-list-group" data-direction="{{ direction | slugify }}">
+    <h4 class="conf-list-title">{{ direction }}</h4>
+    <ul class="conf-list">
+      {%- for item in items_in_direction %}
+      <li>
+        {{ item.name }}
+        {%- if item.pages or item.format %}
+        <span class="conf-meta">{{ item.pages }}{% if item.pages and item.format %} · {% endif %}{{ item.format }}{% if item.note %} · {{ item.note }}{% endif %}</span>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+</div>
+
+</div>{%- comment %} .cal-filter-group {% endcomment %}

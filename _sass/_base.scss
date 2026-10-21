@@ -1,0 +1,2170 @@
+/*******************************************************************************
+ * Styles for the base elements of the theme.
+ ******************************************************************************/
+
+// Typography
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+div,
+li,
+span,
+strong {
+  color: var(--global-text-color);
+}
+
+hrcm {
+  border-top: 1px solid var(--global-divider-color);
+}
+
+
+
+hr {
+  border-top: 1px solid var(--global-divider-color);
+  border-width: medium;
+  border-style: groove;
+  margin-left: 2rem;
+  margin-right: 18rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+table {
+  td,
+  th {
+    font-size: 1rem;
+    padding: 1px 1rem 1px 0;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
+
+a,
+table.table a {
+  color: var(--global-theme-color);
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: underline;
+  }
+
+  &:hover:after :not(.nav-item.dropdown) {
+    width: 100%;
+  }
+}
+
+.table-dark {
+  background-color: transparent;
+  &.table-bordered {
+    border: 1px solid var(--global-divider-color) !important;
+  }
+}
+
+blockquote {
+  background: var(--global-bg-color);
+  border-left: 5px solid var(--global-theme-color);
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 1.2rem;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  /* Tips, warnings, and dangers blockquotes */
+  &.block-tip {
+    border-color: var(--global-tip-block);
+    background-color: var(--global-tip-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-tip-block-text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-tip-block-title);
+    }
+  }
+
+  &.block-warning {
+    border-color: var(--global-warning-block);
+    background-color: var(--global-warning-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-warning-block-text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-warning-block-title);
+    }
+  }
+
+  &.block-danger {
+    border-color: var(--global-danger-block);
+    background-color: var(--global-danger-block-bg);
+
+    em,
+    li,
+    p,
+    strong {
+      color: var(--global-danger-block-text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--global-danger-block-title);
+    }
+  }
+}
+
+// Checklist
+
+ul.task-list {
+  list-style-type: none; /* Remove bullets from all levels */
+}
+
+ul.task-list > li ul {
+  /* Nested lists within .task-list */
+  padding-inline-start: 1.5rem;
+}
+
+ul.task-list input[type="checkbox"] {
+  margin: 0.275rem 0.5rem 0.5rem -1rem;
+  vertical-align: middle;
+}
+
+// Math
+
+.equation {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+// Caption
+
+.caption {
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+// Research Overview
+
+.research {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -3rem;
+  margin-bottom: -5rem;
+  width: 100%;
+}
+
+// Card
+
+.card {
+  background-color: var(--global-card-bg-color);
+
+  .card-img {
+    width: 100%;
+    padding-top: 1.25rem;
+  }
+  iframe {
+    width: 18.5rem;
+    margin-left: 1rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    color: var(--global-text-color);
+    font-size: 1.5rem;
+  }
+
+  .card-des {
+    width: 22rem;
+    font-size: 0.8rem;
+  }
+
+  .card-body {
+    padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+  }
+}
+
+// Citation
+
+.citation,
+.citation-number {
+  color: var(--global-theme-color);
+}
+
+// About page (academicpages-style sidebar)
+
+.news-spacer {
+  margin-bottom: 2.5rem;
+}
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-row-reversed {
+  flex-direction: row-reverse;
+}
+
+.about-sidebar-col {
+  margin-bottom: 2rem;
+}
+
+// Mobile-first: compact horizontal header (avatar beside name/bio),
+// matching academicpages' collapsed mobile sidebar.
+.about-sidebar {
+  text-align: left;
+}
+
+.about-sidebar-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+
+  img {
+    max-width: 64px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    flex-shrink: 0;
+
+    // Non-circular profile image (e.g. a wide logo): keep its aspect ratio
+    &.about-profile-wide {
+      width: 120px;
+      max-width: 120px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+// Profile image with a dark-mode variant (profile.image_dark)
+.about-profile-dark {
+  display: none;
+}
+
+html[data-theme="dark"] {
+  .about-profile-light {
+    display: none;
+  }
+
+  .about-profile-dark {
+    display: block;
+  }
+}
+
+.about-sidebar-header-text {
+  min-width: 0;
+}
+
+.about-name {
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.about-subtitle {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  margin: 0;
+}
+
+// Mobile: address info is tucked behind a discreet clickable disclosure
+// (an icon only, no label), sitting on the same row as the social icons.
+.about-sidebar-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem 0.85rem;
+  margin-top: 0.6rem;
+
+  .social {
+    order: -1;
+    flex: 0 0 auto;
+  }
+
+  .address-toggle {
+    flex: 0 0 auto;
+    min-width: 0;
+
+    &[open] {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.address-toggle {
+  summary {
+    cursor: pointer;
+    list-style: none;
+    color: var(--global-text-color-light);
+    width: 1.5rem;
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+      content: "";
+    }
+
+    i {
+      font-size: 0.7rem;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+
+  &[open] summary i {
+    transform: rotate(180deg);
+  }
+}
+
+.about-sidebar {
+  .address {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 0.7rem;
+    text-align: left;
+
+    p {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .address-email {
+    font-size: 0.85em;
+    color: var(--global-text-color-light);
+  }
+
+  .social {
+    text-align: left;
+
+    .contact-icons {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Desktop: expand to the large centered vertical profile card.
+@media (min-width: 768px) {
+  .about-sidebar {
+    text-align: center;
+    position: sticky;
+    top: 76px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+  }
+
+  .about-sidebar-header {
+    display: block;
+    margin-bottom: 0;
+
+    img {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 1rem;
+
+      &.about-profile-wide {
+        max-width: 220px;
+        width: 100%;
+      }
+    }
+  }
+
+  // Only .social remains visible here (the disclosure is d-md-none);
+  // drop the flex row so its own text-align: center takes effect.
+  .about-sidebar-contact {
+    display: block;
+  }
+
+  .about-name {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .about-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-sidebar .address {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .about-sidebar .social {
+    text-align: center;
+
+    .contact-icons {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.post-description {
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
+// Navbar customization
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--global-divider-color);
+  background-color: var(--global-bg-color);
+  opacity: 0.95;
+}
+
+.navbar .dropdown-menu {
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+
+  a:not(.active) {
+    color: var(--global-text-color);
+  }
+
+  a:hover {
+    color: var(--global-hover-color);
+  }
+
+  .dropdown-divider {
+    border-top: 1px solid var(--global-divider-color) !important;
+  }
+}
+
+.dropdown-item {
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-hover-color);
+    background-color: var(--global-bg-color);
+  }
+}
+
+.navbar.navbar-light {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .navbar-brand {
+    color: var(--global-text-color);
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+
+  .navbar-nav .nav-item .nav-link .nav-logo {
+    height: 1.6em;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    background-color: inherit;
+    font-weight: bolder;
+    color: var(--global-theme-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+
+  .navbar-brand.social {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 1.7rem;
+
+    a {
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--global-text-color);
+    border-radius: 1px;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+  }
+
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+
+  .middle-bar {
+    opacity: 0;
+  }
+
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+
+.navbar-toggler.collapsed {
+  .top-bar {
+    transform: rotate(0);
+  }
+
+  .middle-bar {
+    opacity: 1;
+  }
+
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
+
+#light-toggle,
+#search-toggle {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+}
+
+// Social (bottom)
+
+.social {
+  text-align: center;
+
+  .contact-icons {
+    font-size: 4rem;
+
+    a {
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+
+  .contact-note {
+    font-size: 0.8rem;
+  }
+}
+
+.wechat-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wechat-modal > img {
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 33%;
+  max-width: 400px;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 400px) {
+  .wechat-modal > img {
+    width: 100%;
+  }
+}
+
+// Footer
+footer.fixed-bottom {
+  background-color: var(--global-footer-bg-color);
+  font-size: 0.75rem;
+
+  .container {
+    color: var(--global-footer-text-color);
+    padding-top: 9px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
+// Mobile: un-pin the footer from the viewport (it should only appear
+// once you actually scroll to the end of the page) and make it read
+// as a quiet footnote instead of a persistent colored bar.
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  footer.fixed-bottom {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    border-top: 1px solid var(--global-divider-color);
+    font-size: 0.65rem;
+
+    .container {
+      color: var(--global-text-color-light);
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    a {
+      color: var(--global-text-color-light);
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+footer.sticky-bottom {
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 0.9rem;
+
+  .container {
+    text-align: center;
+  }
+}
+
+// CV
+
+.cv {
+  margin-bottom: 40px;
+
+  .card {
+    background-color: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+
+    .list-group-item {
+      background-color: inherit;
+      border-color: var(--global-divider-color);
+
+      .badge {
+        color: var(--global-card-bg-color) !important;
+        background-color: var(--global-theme-color) !important;
+      }
+    }
+  }
+}
+
+.table-cv-map {
+  background-color: transparent;
+  border: none;
+  color: var(--global-text-color);
+}
+
+.date-column {
+  width: 75px;
+  transform: translateX(-15px) translateY(-5px);
+}
+
+// Repositories
+
+@media (min-width: 768px) {
+  .repo {
+    max-width: 50%;
+  }
+}
+
+// Blog
+
+.header-bar {
+  border-bottom: 1px solid var(--global-divider-color);
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 5rem;
+  }
+}
+
+.tag-category-list {
+  border-bottom: 1px solid var(--global-divider-color);
+  text-align: center;
+  padding-top: 1rem;
+
+  ul {
+    justify-content: center;
+    display: flow-root;
+
+    p,
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 1rem 0.5rem;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+.post-title {
+  mjx-container[jax="CHTML"][display="true"] {
+    display: unset;
+  }
+}
+
+.post-list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  li {
+    border-bottom: 1px solid var(--global-divider-color);
+    list-style: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .post-meta {
+      color: var(--global-text-color-light);
+      font-size: 0.875rem;
+      margin-bottom: 0;
+    }
+
+    .post-tags {
+      color: var(--global-text-color-light);
+      font-size: 0.875rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0;
+    }
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+
+    mjx-container[jax="CHTML"][display="true"] {
+      display: unset;
+    }
+  }
+}
+
+.pagination {
+  .page-item {
+    .page-link {
+      color: var(--global-text-color);
+
+      &:hover {
+        color: $black-color;
+      }
+    }
+
+    &.active .page-link {
+      color: $white-color;
+      background-color: var(--global-theme-color);
+
+      &:hover {
+        background-color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+// Distill
+
+.distill {
+  a:hover {
+    border-bottom-color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+// Projects
+
+.projects {
+  a {
+    text-decoration: none;
+
+    &:hover {
+      .card-title {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+  
+  .card-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  // Multiple project cards in a section should stack one after another,
+  // not sit side by side as Bootstrap's flex .row would otherwise do.
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col {
+    padding-bottom: 1rem;
+  }
+
+  .grid-sizer,
+  .grid-item {
+    width: 250px;
+    margin-bottom: 10px;
+  }
+
+  h2.category {
+    color: var(--global-divider-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: right;
+  }
+
+  // A section-less divider (e.g. "Selected Past Projects") instead of a
+  // raw <h1> mixed in among <h2> category headings.
+  h2.category-divider {
+    text-align: center;
+    border-bottom: none;
+    font-size: 1.6rem;
+    margin-top: 3rem;
+  }
+
+  .category-note {
+    text-align: right;
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  // Project cards: mobile-first stacked (image above text); above the
+  // md breakpoint, image sits left or right per project.img_position.
+  .project-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1.25rem 1.25rem;
+
+    .project-card-text {
+      min-width: 0;
+    }
+
+    .card-img {
+      width: 100%;
+      padding-top: 0;
+    }
+  }
+
+  .project-card-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    .card-img {
+      flex: 1 1 200px;
+      max-width: 280px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .project-card--img-right .project-card-body,
+    .project-card--img-left .project-card-body {
+      flex-direction: row;
+      align-items: flex-start;
+
+      .project-card-text {
+        flex: 1 1 60%;
+        padding-top: 1.5rem;
+      }
+
+      .card-img {
+        flex: 0 0 35%;
+        max-width: 35%;
+      }
+    }
+
+    .project-card--img-left .project-card-body {
+      flex-direction: row-reverse;
+    }
+
+    .project-card--multi .project-card-body {
+      flex-direction: column;
+
+      .project-card-text {
+        width: 100%;
+        flex: 1 1 auto;
+      }
+    }
+  }
+
+  .project-card--multi .project-card-body .project-card-text {
+    width: 100%;
+  }
+}
+
+// Conference Calendar
+
+.conference-calendar {
+  // Month-group colours: Sept.–Dec., Jan., Feb.–May, Jun.–Aug.
+  --cal-g1: #c2410c;
+  --cal-g2: #1d4ed8;
+  --cal-g3: #15803d;
+  --cal-g4: #be185d;
+  --cal-on-g: #ffffff; // text on a filled (deadline) pill
+
+  .cal-intro {
+    color: var(--global-text-color-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .cal-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .cal-filter {
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--global-divider-color);
+    background: transparent;
+    color: var(--global-text-color);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    &.active {
+      background: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      color: var(--global-hover-text-color);
+    }
+  }
+
+  // ---- Calendar -----------------------------------------------------------
+  // Each month group has its own colour (--g): it tints the group's header,
+  // lightly bands its columns, and colours the pills in its cells.
+
+  .cal-toolbar {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+
+    .cal-filters {
+      margin-bottom: 0;
+      flex: 1 1 18rem;
+      min-width: 0;
+    }
+  }
+
+  // Icon-only round button, the same height as the filter pills.
+  .cal-print-btn {
+    flex: 0 0 auto;
+    width: 2.1rem;
+    height: 2.1rem;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1;
+    border-radius: 50%;
+    border: 1px solid var(--global-theme-color);
+    background: transparent;
+    color: var(--global-theme-color);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      background: var(--global-theme-color);
+      color: var(--global-hover-text-color);
+    }
+  }
+
+  .cal-g1 {
+    --g: var(--cal-g1);
+  }
+  .cal-g2 {
+    --g: var(--cal-g2);
+  }
+  .cal-g3 {
+    --g: var(--cal-g3);
+  }
+  .cal-g4 {
+    --g: var(--cal-g4);
+  }
+
+  .cal-scroll {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .cal-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+    margin: 0;
+  }
+
+  // Wide enough for the longest label ("Communications") on one line.
+  .cal-col-direction {
+    width: 8rem;
+  }
+
+  // January is a one-month group with few entries, so it gets a narrow
+  // column and leaves more room for the other months.
+  .cal-col-jan {
+    width: 3.6rem;
+  }
+
+  .cal-corner {
+    background: var(--global-bg-color);
+  }
+
+  .cal-group {
+    text-align: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.45rem 0.2rem;
+    color: var(--g);
+    background: color-mix(in srgb, var(--g) 22%, var(--global-bg-color));
+  }
+
+  .cal-month {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 0.2rem;
+    color: var(--global-text-color);
+    background: color-mix(in srgb, var(--g) 11%, var(--global-bg-color));
+    border-bottom: 2px solid var(--g);
+  }
+
+  // A white gap between month groups.
+  .cal-group-start {
+    border-left: 3px solid var(--global-bg-color);
+  }
+
+  .cal-direction {
+    background: var(--global-bg-color);
+    text-align: left;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding: 0.55rem 0.4rem 0.55rem 0.7rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+  }
+
+  .cal-cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.35rem 2px;
+    background: color-mix(in srgb, var(--g) 4%, var(--global-bg-color));
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  tbody tr:last-child {
+    .cal-direction,
+    .cal-cell {
+      border-bottom: none;
+    }
+  }
+
+  // Pills: filled = submission deadline, outlined = conference.
+  .cal-badge {
+    display: block;
+    width: fit-content;
+    margin: 0.15rem auto;
+    padding: 0.05rem 0.32rem;
+    border-radius: 999px;
+    font-size: 0.64rem;
+    line-height: 1.45;
+    overflow-wrap: normal; // never split a name; HSCC+ICCPS may break after "+"
+    text-align: center;
+    border: 1px solid var(--g, var(--global-text-color-light));
+
+    &--deadline {
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--cal-on-g);
+      background: var(--g, var(--global-text-color-light));
+    }
+
+    &--occurs {
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--g, var(--global-text-color-light));
+      background: var(--global-bg-color);
+    }
+  }
+
+  .cal-legend {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.75rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1.25rem;
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .cal-badge {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  // Below the desktop breakpoint, 13 columns can't fit without either
+  // shrinking text illegibly or scrolling horizontally — so each direction
+  // becomes a stacked card of "month: conferences" lines instead.
+  @media screen and (max-width: 991.98px) {
+    .cal-scroll {
+      border: none;
+      border-radius: 0;
+    }
+
+    .cal-table,
+    .cal-table thead,
+    .cal-table tbody,
+    .cal-table tr,
+    .cal-table th,
+    .cal-table td {
+      display: block;
+    }
+
+    .cal-table thead,
+    .cal-table colgroup {
+      display: none;
+    }
+
+    .cal-table tbody tr {
+      padding: 0.6rem 0.85rem;
+      margin-bottom: 0.6rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.75rem;
+    }
+
+    .cal-direction {
+      padding: 0 0 0.3rem;
+      border-bottom: none;
+    }
+
+    .cal-cell {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.15rem 0;
+      text-align: left;
+      background: none;
+      border: none;
+
+      &:empty {
+        display: none;
+      }
+
+      &::before {
+        content: attr(data-month);
+        flex: 0 0 2.9rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--g);
+      }
+    }
+
+    .cal-badge {
+      display: inline-block;
+      margin: 0;
+      font-size: 0.72rem;
+    }
+  }
+
+  .conf-list-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.5rem 2.5rem;
+  }
+
+  .conf-list-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .conf-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+
+    li {
+      padding: 0.2rem 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px dashed var(--global-divider-color);
+      }
+    }
+
+    // Journal details: page limit · column format · note
+    .conf-meta {
+      display: block;
+      font-size: 0.72rem;
+      line-height: 1.35;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+// Publications
+
+.publications {
+  margin-top: 0.75rem;
+
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2.bibliography {
+    color: var(--global-divider-color);
+    border-top: 2px solid var(--global-divider-color);
+    font-size: 1.25rem;
+    padding-top: 0.35rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: right;
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    font-size: 0.7rem;
+
+    li {
+      margin-bottom: 0.6rem;
+      line-height: 1.35;
+
+      .preview {
+        width: 100%;
+        min-width: 80px;
+        max-width: 100px;
+      }
+
+      // Fix the venue-badge column to a small, consistent width at
+      // every screen size instead of relying on Bootstrap's .col,
+      // which grows to ~50% below the sm breakpoint (the "badge is
+      // way too long on mobile" bug).
+      .abbr {
+        flex: 0 0 100px;
+        max-width: 100px;
+        margin-bottom: 0;
+
+        @media (max-width: 767.98px) {
+          flex-basis: 72px;
+          max-width: 72px;
+          padding-right: 0;
+        }
+
+        abbr {
+          display: inline-block;
+          max-width: 100%;
+          white-space: normal;
+          background-color: var(--global-theme-color);
+          color: white;
+          margin-bottom: 0.25rem;
+
+          // Venues without a url render as a plain <div> instead of
+          // an <a> (see bib.liquid) — style both so the label is
+          // always white regardless of which one it is.
+          a,
+          div {
+            color: white;
+          }
+
+          a:hover {
+            text-decoration: none;
+          }
+        }
+
+        .award {
+          color: var(--global-theme-color) !important;
+          border: 1px solid var(--global-theme-color);
+        }
+      }
+
+      // The title/author column next to the badge: always take the
+      // remaining row width instead of Bootstrap's col-sm-8/10
+      // (which has no defined width below the sm breakpoint).
+      .abbr ~ div {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .title {
+        font-weight: bolder;
+        font-size: 0.9rem;
+      }
+
+      .author {
+        font-size: 0.7rem;
+        a {
+          border-bottom: 1px dashed var(--global-theme-color);
+
+          &:hover {
+            border-bottom-style: solid;
+            text-decoration: none;
+          }
+        }
+
+        > em {
+          border-bottom: 1px solid;
+          font-style: normal;
+          font-size: 0.7rem;
+        }
+
+        > span.more-authors {
+          color: var(--global-text-color-light);
+          border-bottom: 1px dashed var(--global-text-color-light);
+          cursor: pointer;
+
+          &:hover {
+            color: var(--global-text-color);
+            border-bottom: 1px dashed var(--global-text-color);
+          }
+        }
+      }
+
+      .links {
+        margin-top: 0.15rem;
+
+        a.btn {
+          color: var(--global-text-color);
+          border: 1px solid var(--global-text-color);
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          padding-top: 0.1rem;
+          padding-bottom: 0.01rem;
+          margin: 0 0.25rem 0.2rem 0;
+          font-size: 0.5rem;
+
+          &:hover {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+          }
+        }
+        a.award.btn {
+          border-color: var(--global-highlight-color);
+        }
+      }
+
+      .badges {
+        padding-bottom: 0;
+        span {
+          display: inline-block;
+          color: $black-color;
+          height: 100%;
+          padding-right: 0.5rem;
+          vertical-align: middle;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .hidden {
+        font-size: 0.875rem;
+        max-height: 0px;
+        overflow: hidden;
+        text-align: justify;
+        transition-property: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+        transition: all 0.15s ease;
+
+        p {
+          line-height: 1.4em;
+          margin: 10px;
+        }
+
+        pre {
+          font-size: 1em;
+          line-height: 1.4em;
+          padding: 10px;
+        }
+      }
+
+      .hidden.open {
+        max-height: 100em;
+        transition-property: 0.15s ease;
+        -moz-transition: 0.15s ease;
+        -ms-transition: 0.15s ease;
+        -o-transition: 0.15s ease;
+        transition: all 0.15s ease;
+      }
+
+      div.abstract.hidden {
+        border: dashed 1px var(--global-bg-color);
+      }
+
+      div.abstract.hidden.open {
+        border-color: var(--global-text-color);
+      }
+    }
+    div.award.hidden {
+      border: dashed 1px var(--global-bg-color);
+    }
+    div.award.hidden.open {
+      border-color: var(--global-highlight-color);
+    }
+  }
+}
+
+// Rouge Color Customization
+figure.highlight {
+  margin: 0 0 1rem;
+}
+
+pre {
+  color: var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+
+  pre,
+  code {
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+
+code {
+  color: var(--global-theme-color);
+  background-color: var(--global-code-bg-color);
+  border-radius: 3px;
+  padding: 3px 3px;
+}
+
+// Transitioning Themes
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+// Extra Markdown style (post Customization)
+.post {
+  .post-meta {
+    color: var(--global-text-color-light);
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .post-tags {
+    color: var(--global-text-color-light);
+    font-size: 0.875rem;
+    padding-top: 0.25rem;
+    padding-bottom: 1rem;
+
+    a {
+      color: var(--global-text-color-light);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 56px;
+  z-index: 10;
+
+  /* Dimensions */
+  width: 100%;
+  height: 1px;
+
+  /* Reset the appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+
+  /* Progress bar container for Firefox/IE10  */
+  background-color: transparent;
+
+  /* Progress bar value for IE10  */
+  color: var(--global-theme-color);
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--global-theme-color);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--global-theme-color);
+}
+
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 5px;
+  display: block;
+}
+
+.progress-bar {
+  background-color: var(--global-theme-color);
+  width: 0%;
+  display: block;
+  height: inherit;
+}
+
+/* Copy button */
+.code-display-wrapper {
+  position: relative;
+
+  .copy {
+    background: var(--global-card-bg-color);
+    border-color: var(--global-bg-color);
+    border-radius: 0.3rem;
+    border-style: none;
+    color: var(--global-text-color);
+    font-size: medium;
+    opacity: 0;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+  }
+
+  &:active .copy,
+  &:focus .copy,
+  &:hover .copy {
+    color: var(--global-hover-color);
+    opacity: 1;
+  }
+}
+
+.btn-group.dropdown {
+  .btn {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  .btn-secondary.dropdown-toggle {
+    border: 1px solid var(--global-divider-color);
+
+    .page-size {
+      color: inherit;
+    }
+
+    &:not(.active) {
+      background-color: var(--global-bg-color) !important;
+      color: var(--global-text-color);
+    }
+
+    &:hover {
+      background-color: var(--global-hover-color) !important;
+      color: var(--global-hover-text-color) !important;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: var(--global-bg-color);
+  }
+
+  .dropdown-item {
+    background-color: var(--global-bg-color);
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+
+  .dropdown-item.active,
+  .dropdown-item:active {
+    background-color: var(--global-hover-color);
+    color: var(--global-hover-text-color) !important;
+
+    &:hover {
+      color: var(--global-hover-text-color);
+    }
+  }
+}
+
+/* Table of Contents */
+nav[data-toggle="toc"] {
+  top: 5rem;
+
+  .nav .nav > li > a {
+    font-size: 0.75rem;
+  }
+
+  .nav > li > a {
+    color: var(--global-text-color);
+    font-size: 0.75rem;
+
+    &:hover {
+      color: var(--global-hover-color);
+      border-left-color: var(--global-hover-color);
+    }
+  }
+
+  .nav-link.active {
+    color: var(--global-theme-color);
+    border-left-color: var(--global-theme-color);
+    font-size: 0.75rem;
+
+    &:hover {
+      color: var(--global-hover-color);
+      border-left-color: var(--global-hover-color);
+    }
+  }
+}
+
+/* small screens */
+@media (max-width: 576px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[data-toggle="toc"] {
+    visibility: hidden;
+    height: 0;
+    top: 0;
+  }
+}
+
+.featured-posts {
+  a {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+
+    .card-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      color: var(--global-theme-color);
+
+      .card-title {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .post-meta {
+    color: var(--global-text-color-light);
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+  }
+}
+
+.unloaded {
+  display: none !important;
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+#toc-sidebar {
+  z-index: 1;
+}
+
+.echarts {
+  height: 400px;
+  width: 100%;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+}
+
+swiper-container {
+  --swiper-navigation-color: var(--global-theme-color);
+  --swiper-pagination-color: var(--global-theme-color);
+  --swiper-pagination-bullet-inactive-color: var(--global-text-color);
+}
+
+.ps-root {
+  .ps-algorithm {
+    margin: 0.8em 0;
+    border-top: 3px solid var(--global-text-color);
+    border-bottom: 2px solid var(--global-text-color);
+  }
+
+  .ps-algorithm.with-caption > .ps-line:first-child {
+    border-bottom: 2px solid var(--global-text-color);
+  }
+}
+
+// Ninja Keys
+// for more options, check https://github.com/ssleptsov/ninja-keys?tab=readme-ov-file#css-variables
+ninja-keys {
+  --ninja-accent-color: var(--global-theme-color);
+  --ninja-icon-size: 0px;
+  --ninja-modal-background: var(--global-bg-color);
+  --ninja-z-index: 1031;
+}
+
+ninja-keys::part(ninja-input) {
+  color: var(--ninja-selected-text-color);
+}
+
+ninja-keys::part(ninja-input-wrapper) {
+  background: var(--global-bg-color);
+}
+
+// newsletter
+.newsletter-form-container {
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.newsletter-form-input,
+.bibsearch-form-input {
+  color: var(--global-newsletter-text-color);
+  background: var(--global-newsletter-bg-color);
+  border: 1px solid var(--global-newsletter-text-color);
+  outline: none;
+  margin: 0px 10px 0px 0px;
+  width: 100%;
+  max-width: 350px;
+  min-width: 100px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.newsletter-form-input:focus {
+  border-color: var(--global-theme-color) !important;
+}
+
+.newsletter-form-button {
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+  display: flex;
+  width: min-content;
+  max-width: 200px;
+  white-space: nowrap;
+  height: 38px;
+  align-items: center;
+  flex-direction: row;
+  padding: 9px 17px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  border-radius: 6px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter-loading-button {
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+  display: none;
+  width: min-content;
+  max-width: 300px;
+  white-space: nowrap;
+  height: 38px;
+  align-items: center;
+  flex-direction: row;
+  padding: 9px 17px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+  border-radius: 6px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.newsletter-success {
+  color: var(--global-text-color);
+  display: none;
+  align-items: center;
+  width: 100%;
+}
+
+.newsletter-error {
+  color: var(--global-theme-color);
+  display: none;
+  align-items: center;
+  width: 100%;
+}
+
+.newsletter-back-button {
+  color: var(--global-theme-color);
+  margin: 10px auto;
+  text-align: center;
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .newsletter-form-input,
+  .newsletter-form-button,
+  .newsletter-loading-button,
+  .newsletter-success,
+  .newsletter-error {
+    font-size: 16px !important;
+  }
+  .newsletter-form-container {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+// popover is used for annotation in bib.liquid
+.popover {
+  background-color: var(--global-bg-color);
+  border-color: var(--global-divider-color);
+
+  .popover-header {
+    color: var(--global-text-color); // Header text color
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .popover-body {
+    color: var(--global-text-color); // Body text color
+  }
+}
+
+.bs-popover-top {
+  // arrow fill color
+  .arrow::after {
+    border-top-color: var(--global-bg-color);
+  }
+
+  // arrow border color
+  .arrow:before {
+    border-top-color: var(--global-divider-color);
+  }
+}
+
+.bs-popover-bottom {
+  // arrow fill color
+  .arrow::after {
+    border-bottom-color: var(--global-bg-color);
+  }
+
+  // arrow border color
+  .arrow:before {
+    border-bottom-color: var(--global-divider-color);
+  }
+}
+
+// highlight-search-term
+::highlight(search) {
+  background-color: var(--global-theme-color);
+  color: var(--global-text-color);
+}
+
+// learnCPS logos (home page and nav bar)
+.learncps-logo,
+.navbar .nav-logo {
+  border-radius: 0.4rem;
+}
+
+// "learnCPS" written as text in the logo's typeface and colours
+.learncps-wordmark {
+  font-family: "Archivo", sans-serif;
+  white-space: nowrap;
+
+  .learn {
+    font-weight: 400;
+    color: #3b6ea8;
+  }
+
+  .cps {
+    font-weight: 800;
+    font-stretch: 80%;
+    color: #0f2d52;
+  }
+}
+
+html[data-theme="dark"] .learncps-wordmark {
+  .learn {
+    color: #9cc3ea;
+  }
+
+  .cps {
+    color: #ffffff;
+  }
+}
+
+// Images swapped by theme: .logo-light shows in light mode, .logo-dark in dark mode
+.logo-dark {
+  display: none !important;
+}
+
+html[data-theme="dark"] {
+  .logo-light {
+    display: none !important;
+  }
+
+  .logo-dark {
+    display: inline !important;
+  }
+}
+
+// Conference calendar in dark mode: lighter group colours, dark pill text.
+html[data-theme="dark"] .conference-calendar {
+  --cal-g1: #fb923c;
+  --cal-g2: #60a5fa;
+  --cal-g3: #4ade80;
+  --cal-g4: #f472b6;
+  --cal-on-g: #1c1c1d;
+}
+
+// Printing the conference calendar. The "Print / PDF" button copies the
+// calendar into #cal-print-root (a direct child of <body>), adds the
+// .cal-printing class and a landscape @page rule with zero margins (which
+// also suppresses the browser's header and footer), and removes all three
+// after printing. Only the table is printed, in light colours, filling the
+// page; the 10mm white border comes from the root's own padding.
+#cal-print-root {
+  display: none;
+}
+
+@media print {
+  html.cal-printing {
+    // !important: the fixed navbar's body padding must not push the table down.
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #fff;
+    }
+
+    body > *:not(#cal-print-root) {
+      display: none !important;
+    }
+  }
+
+  #cal-print-root {
+    display: block;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+
+    --global-bg-color: #ffffff;
+    --global-text-color: #1c1c1d;
+    --global-text-color-light: #5f6368;
+    --global-divider-color: #d9d9de;
+    --cal-g1: #c2410c;
+    --cal-g2: #1d4ed8;
+    --cal-g3: #15803d;
+    --cal-g4: #be185d;
+    --cal-on-g: #ffffff;
+
+    padding: 10mm;
+    color: var(--global-text-color);
+    background: #fff;
+
+    .cal-legend {
+      display: none;
+    }
+
+    .cal-scroll {
+      overflow: visible;
+    }
+
+    // Fits one landscape page on both A4 (210mm tall) and Letter (216mm)
+    // inside the 10mm padding.
+    .cal-table {
+      height: 186mm;
+    }
+
+    .cal-col-direction {
+      width: 37mm;
+    }
+
+    .cal-col-jan {
+      width: 15mm;
+    }
+
+    .cal-group {
+      font-size: 8pt;
+      padding: 1.5mm 1mm;
+    }
+
+    .cal-month {
+      font-size: 9pt;
+      padding: 1.5mm 1mm;
+    }
+
+    .cal-direction {
+      font-size: 10pt;
+      padding: 1mm 2mm 1mm 3mm;
+    }
+
+    .cal-badge {
+      font-size: 7.5pt;
+      padding: 0.3mm 1.3mm;
+      margin: 0.6mm auto;
+    }
+
+    tr {
+      break-inside: avoid;
+    }
+  }
+}

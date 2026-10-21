@@ -1,0 +1,154 @@
+# Conferences shown on /publication-planner/: the calendar table and the
+# "Conferences" list both read this file, grouped by research direction.
+# acronym  = short label in the calendar (in parentheses if not annual)
+# name     = full name in the Conferences list
+# deadline = month of the paper-submission deadline
+# occurs   = month the conference takes place
+# Months checked against the 2026/2027 editions in Oct 2026.
+
+- direction: Controls
+  acronym: CDC
+  name: "IEEE CDC/L-CSS"
+  deadline: Mar
+  occurs: Dec
+- direction: Controls
+  acronym: ACC
+  name: ACC
+  deadline: Sep
+  occurs: Jul
+- direction: Controls
+  acronym: ECC
+  name: ECC
+  deadline: Nov
+  occurs: Jul
+- direction: Controls
+  acronym: L4DC
+  name: L4DC
+  deadline: Nov
+  occurs: Jun
+- direction: Controls
+  acronym: "(IFAC)"
+  name: "IFAC World Congress (3y)"
+  deadline: Nov
+  occurs: Aug
+- direction: Controls
+  acronym: MED
+  name: IEEE MED
+  deadline: Feb
+  occurs: Jun
+
+- direction: Robotics
+  acronym: ICRA
+  name: IEEE ICRA
+  deadline: Sep
+  occurs: May
+- direction: Robotics
+  acronym: IROS
+  name: "IEEE/RSJ IROS"
+  deadline: Mar
+  occurs: Oct
+- direction: Robotics
+  acronym: CoRL
+  name: CoRL
+  deadline: May
+  occurs: Nov
+
+- direction: Learning
+  acronym: NeurIPS
+  name: NeurIPS
+  deadline: May
+  occurs: Dec
+- direction: Learning
+  acronym: ICML
+  name: ICML
+  deadline: Jan
+  occurs: Jul
+- direction: Learning
+  acronym: ICLR
+  name: ICLR
+  deadline: Sep
+  occurs: Apr
+- direction: Learning
+  acronym: AAAI
+  name: AAAI
+  deadline: Jul
+  occurs: Feb
+- direction: Learning
+  acronym: CVPR
+  name: CVPR
+  deadline: Nov
+  occurs: Jun
+- direction: Learning
+  acronym: COLT
+  name: COLT
+  deadline: Feb
+  occurs: Jul
+
+- direction: Human-Robot Collaboration
+  acronym: HRI
+  name: "ACM/IEEE HRI"
+  deadline: Sep
+  occurs: Mar
+- direction: Human-Robot Collaboration
+  acronym: RO-MAN
+  name: IEEE RO-MAN
+  deadline: Mar
+  occurs: Aug
+- direction: Human-Robot Collaboration
+  acronym: Humanoids
+  name: IEEE-RAS Humanoids
+  deadline: Jul
+  occurs: Dec
+
+- direction: CPS
+  acronym: "HSCC+ICCPS"
+  name: "ACM/IEEE HSCC+ICCPS (CPS-IoT Week)"
+  deadline: Nov
+  occurs: May
+- direction: CPS
+  acronym: EMSOFT
+  name: "ACM/IEEE EMSOFT (ESWEEK)"
+  deadline: Mar
+  occurs: Oct
+- direction: CPS
+  acronym: "(CPHS)"
+  name: "IFAC CPHS (2y)"
+  deadline: May
+  occurs: Dec
+
+- direction: Communications
+  acronym: INFOCOM
+  name: IEEE INFOCOM
+  deadline: Jul
+  occurs: May
+- direction: Communications
+  acronym: ICC
+  name: IEEE ICC
+  deadline: Oct
+  occurs: Jun
+- direction: Communications
+  acronym: ICMLCN
+  name: IEEE ICMLCN
+  deadline: Dec
+  occurs: Jun
+- direction: Communications
+  acronym: SIGCOMM
+  name: ACM SIGCOMM
+  deadline: Feb
+  occurs: Aug
+
+- direction: Transportation
+  acronym: ITSC
+  name: IEEE ITSC
+  deadline: Mar
+  occurs: Sep
+- direction: Transportation
+  acronym: TRB
+  name: TRB Annual Meeting
+  deadline: Aug
+  occurs: Jan
+- direction: Transportation
+  acronym: IV
+  name: IEEE IV
+  deadline: Oct
+  occurs: Jun

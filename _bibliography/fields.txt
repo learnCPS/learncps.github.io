@@ -1,0 +1,15 @@
+Button	BibTeX field
+Award badge	award (+ optional award_name)
+Abs	abstract
+arXiv	arxiv
+Bib	bibtex_show={true}
+HTML	html
+DOI	doi
+PDF	pdf
+Supp	supp (supplementary material)
+Video	video
+Blog	blog
+Code	code
+Poster	poster
+Slides	slides
+Website	website

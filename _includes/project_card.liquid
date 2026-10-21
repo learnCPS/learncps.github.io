@@ -1,0 +1,39 @@
+<div class="card-item col">
+  <div class="card hoverable project-card{% if project.img2 %} project-card--multi{% elsif project.img_position == 'left' %} project-card--img-left{% else %} project-card--img-right{% endif %}">
+    <div class="card-body">
+      <h3 class="card-title">{{ project.title }}</h3>
+    </div>
+
+    <div class="project-card-body">
+      <div class="project-card-text">
+        <ul>
+          <li>{{ project.abstract }}</li>
+          {%- if project.details -%}
+          <li>{{ project.details }}</li>
+          {%- endif -%}
+          {%- if project.keywords -%}
+          <li>{{ project.keywords }}</li>
+          {%- endif -%}
+          <li>{{ project.links }}</li>
+        </ul>
+      </div>
+
+      {% if project.img2 %}
+        <div class="project-card-images">
+          {%- if project.img -%}
+          <div class="card-img">
+            {% include figure.liquid path=project.img alt="project thumbnail" url=project.urllink zoomable=true %}
+          </div>
+          {%- endif -%}
+          <div class="card-img">
+            {% include figure.liquid path=project.img2 alt="project thumbnail" url=project.urllink zoomable=true %}
+          </div>
+        </div>
+      {% elsif project.img %}
+        <div class="card-img">
+          {% include figure.liquid path=project.img alt="project thumbnail" url=project.urllink zoomable=true %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

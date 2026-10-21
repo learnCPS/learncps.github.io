@@ -1,0 +1,8 @@
+github_users:
+  - MavridisChristos
+
+repo_description_lines_max: 2
+
+github_repos:
+  - MavridisChristos/OnlineDeterministicAnnealing
+  - MavridisChristos/RiskSensitiveRL

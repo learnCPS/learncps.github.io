@@ -1,0 +1,28 @@
+
+- title: Open Source Projects
+  type: time_table
+  contents:
+    - title: <a href="https://github.com/MavridisChristos/OnlineDeterministicAnnealing">Online Deterministic Annealing</a> &mdash; pip install online-deterministic-annealing
+      # year: ODA
+      description: A hierarchical general-purpose learning architecture designed to meet the needs of applications in which computational resources are limited, and robustness and interpretability are prioritized. Appropriate for System Identification, Supervised, Unsupervised, and Reinforcement Learning.
+    - title: <a href="https://github.com/MavridisChristos/RiskSensitiveRL">Risk-Sensitive Reinforcement Learning</a>
+      # year: RSRL
+      description: Model-free (Actor-Critic and REINFORCE) algorithms for Risk-Sensitive Reinforcement Learning using exponential criteria.
+    - title: <a href="https://github.com/MavridisChristos/BiosignalAcquisition">Real-time EEG signal acquisition and processing</a>
+      # year: EEG
+      description: A Bash/C++ interface for real-time EEG signal acquisition and processing for the BioSemi Active II device.
+
+
+- title: Resources
+  type: time_table
+  contents:
+    - title: <a href="/cv/">My CV</a>
+    - title: <a href="/publication-planner/">Publication Planner</a> 
+
+- title: Some thoughts on academic life and research
+  type: time_table
+  contents:
+    - title: <a href="http://publish.illinois.edu/liberzon/2014/12/04/what-are-we-optimizing-short-term-sum-or-long-term-max/#sthash.tvGoNygO.gbpl">What are we optimizing? short-term sum or long-term max?</a>
+      description: By Daniel Liberzon
+    - title: <a href="https://youtu.be/vtIzMaLkCaM?si=hUEoljMEzqMneAQ3">On the Function and Value of Academic Writing</a>
+      description: By Larry McEnerney (<a href="https://cpb-us-w2.wpmucdn.com/u.osu.edu/dist/5/7046/files/2014/10/UnivChic_WritingProg-1grt232.pdf"> Notes </a>).

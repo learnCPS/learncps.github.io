@@ -1,0 +1,196 @@
+# Journal directory for the "Journals" section on /publication-planner/,
+# grouped and filtered by research direction.
+#
+# pages  = length of a regular paper. "12–16 pp": 12 included, up to 16
+#          with paid extra pages. "~" = soft/typical length; "no limit" =
+#          none stated (typical length in parentheses where known).
+# format = column format at submission: 2-col, 1-col, or magazine.
+# note   = optional extra detail.
+# Checked Oct 2026. "# unverified" = the official guide could not be read
+# directly (figure from search snippets/mirrors); confirm before relying on it.
+
+- direction: Controls
+  name: IEEE TAC
+  pages: "12–16 pp"
+  format: 2-col
+  # note: "technical notes 6–8 pp"
+- direction: Controls
+  name: IFAC AUTOMATICA
+  pages: "~12 pp"  # unverified
+  format: 2-col
+  # note: "nominal length in two-column format; brief papers ~8"
+- direction: Controls
+  name: ELSEVIER SYSTEMS & CONTROL LETTERS (SCL)
+  pages: "~6–8 pp"  # unverified
+  format: 2-col
+  # note: "typical published length (two-column)"
+- direction: Controls
+  name: IEEE TCNS
+  pages: "10–12 pp"
+  format: 2-col
+- direction: Controls
+  name: IEEE CONTROL SYSTEMS LETTERS (L-CSS)
+  pages: "6 pp"
+  format: 2-col
+  # note: "hard limit; CDC/ACC presentation option"
+- direction: Controls
+  name: SIAM SICON
+  pages: "~25 pp"  # unverified
+  format: 1-col
+- direction: Controls
+  name: IEEE TRANS. ON CYBERNETICS (T-CYB)
+  pages: "10–14 pp"
+  format: 2-col
+
+- direction: Robotics
+  name: IEEE T-RO
+  pages: "12–20 pp"
+  format: 2-col
+  # note: "submission ≤18 pp"
+- direction: Robotics
+  name: IEEE ROBOTICS AND AUTOMATION LETTERS (RA-L)
+  pages: "6–8 pp"
+  format: 2-col
+- direction: Robotics
+  name: SAGE IJRR
+  pages: "~12 pp"
+  format: 2-col
+  # note: "typical final length (two-column)"
+- direction: Robotics
+  name: ELSEVIER ROBOTICS & AUTONOMOUS SYSTEMS
+  pages: "no limit"  # unverified
+  format: 1-col
+- direction: Robotics
+  name: FRONTIERS IN ROBOTICS & AI
+  pages: "12–20 pp"  # unverified
+  format: 2-col
+
+- direction: Learning
+  name: IEEE TPAMI
+  pages: "12–18 pp"  # unverified
+  format: 2-col
+- direction: Learning
+  name: JMLR
+  pages: "no limit (~25–50 pp)"
+  format: 1-col
+  # note: "over 50 pp needs justification"
+- direction: Learning
+  name: TMLR
+  pages: "no limit"
+  format: 1-col
+  # note: "main text over 12 pp gets a longer review timeline"
+- direction: Learning
+  name: IEEE TNNLS
+  pages: "10–15 pp"  # unverified
+  format: 2-col
+- direction: Learning
+  name: ELSEVIER NEURAL NETWORKS
+  pages: "no limit"
+  format: 1-col
+- direction: Learning
+  name: ELSEVIER PATTERN RECOGNITION
+  pages: "20–35 pp"  # unverified
+  format: 1-col
+  # note: "double-spaced pages"
+- direction: Learning
+  name: SIAM J. ON MATHEMATICS OF DATA SCIENCE (SIMODS)
+  pages: "no limit (~20–40 pp)"  # unverified
+  format: 1-col
+- direction: Learning
+  name: IEEE TRANS. ON INFORMATION THEORY
+  pages: "≤50 pp"
+  format: 1-col
+  # note: "final version ≤25 pp two-column"
+- direction: Learning
+  name: IEEE TRANS. ON SIGNAL PROCESSING
+  pages: "13–16 pp"
+  format: 2-col
+  # note: "submission ≤13 pp, revision ≤16 pp"
+
+- direction: Human-Robot Collaboration
+  name: ACM TRANS. ON HUMAN-ROBOT INTERACTION (THRI)
+  pages: "no limit"  # unverified
+  format: 1-col
+- direction: Human-Robot Collaboration
+  name: IEEE TRANS. ON HUMAN-MACHINE SYSTEMS (THMS)
+  pages: "10–14 pp"
+  format: 2-col
+
+- direction: CPS
+  name: ELSEVIER NONLINEAR ANALYSIS - HYBRID SYSTEMS (NAHS)
+  pages: "6–25 pp"  # unverified
+  format: 1-col
+- direction: CPS
+  name: ACM TRANS. ON CYBER-PHYSICAL SYSTEMS (TCPS)
+  pages: "≤25 pp"  # unverified
+  format: 1-col
+- direction: CPS
+  name: IEEE TRANS. ON INDUSTRIAL CYBER-PHYSICAL SYSTEMS
+  pages: "10+ pp"  # unverified
+  format: 2-col
+  note: "charges beyond 10 pp; no maximum stated"
+- direction: CPS
+  name: IEEE TRANS. ON INDUSTRIAL INFORMATICS
+  pages: "10–12 pp"
+  format: 2-col
+  # note: "submission ≤10 pp, strictly enforced"
+- direction: CPS
+  name: IEEE INTERNET OF THINGS JOURNAL
+  pages: "8+ pp"
+  format: 2-col
+  note: "charges beyond 8 pp; no maximum stated"
+
+- direction: Communications
+  name: IEEE/ACM TRANS. ON NETWORKING (ToN)
+  pages: "10–16 pp"
+  format: 2-col
+- direction: Communications
+  name: IEEE JOURNAL ON SELECTED AREAS IN COMMUNICATIONS
+  pages: "8–13 pp"
+  format: 2-col
+  # note: "special issues only; ≤16 pp at revision"
+- direction: Communications
+  name: IEEE TCOM
+  pages: "10–13 pp"
+  format: 2-col
+  note: "≤16 pp at revision"
+- direction: Communications
+  name: IEEE TMLCN
+  pages: "no limit"
+  format: 2-col
+- direction: Communications
+  name: IEEE COMMUNICATIONS SURVEYS AND TUTORIALS
+  pages: "30–38 pp"
+  format: 2-col
+- direction: Communications
+  name: ELSEVIER COMPUTER NETWORKS
+  pages: "no limit"  # unverified
+  format: 1-col
+- direction: Communications
+  name: IEEE COMMUNICATIONS MAGAZINE
+  pages: "≤5,500 words"
+  format: magazine
+  # note: "≤6 figures/tables, ≤15 references"
+- direction: Communications
+  name: IEEE NETWORK
+  pages: "≤4,500 words"
+  format: magazine
+  # note: "≤6 figures/tables, ≤15 references"
+
+- direction: Transportation
+  name: IEEE TRANS. ON INTELLIGENT TRANSPORTATION SYSTEMS
+  pages: "10–16 pp"
+  format: 2-col
+- direction: Transportation
+  name: IEEE TRANS. ON INTELLIGENT VEHICLES
+  pages: "10–16 pp"
+  format: 2-col
+- direction: Transportation
+  name: ELSEVIER TRANSPORTATION RESEARCH PART C
+  pages: "no limit (~8,000 words)"  # unverified
+  format: 1-col
+- direction: Transportation
+  name: SAGE TRANSPORTATION RESEARCH RECORD
+  pages: "7,500 words"
+  format: 1-col
+  # note: "limit for the TRB Annual Meeting route; direct submissions have none"

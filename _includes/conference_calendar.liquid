@@ -1,0 +1,73 @@
+{%- assign months = "Sep,Oct,Nov,Dec,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug" | split: "," -%}
+{%- assign month_names = "Sept.,Oct.,Nov.,Dec.,Jan.,Feb.,Mar.,Apr.,May,Jun.,Jul.,Aug." | split: "," -%}
+{%- comment -%}
+  Month groups: {Sept.–Dec.}, {Jan.}, {Feb.–May}, {Jun.–Aug.}.
+  month_groups maps each month to its group; group_starts marks the first
+  month of each group (drawn with a separator).
+{%- endcomment -%}
+{%- assign month_groups = "1,1,1,1,2,3,3,3,3,4,4,4" | split: "," -%}
+{%- assign group_starts = "1,0,0,0,1,1,0,0,0,1,0,0" | split: "," -%}
+{%- assign directions = site.data.conferences | map: "direction" | uniq -%}
+
+<div class="cal-filter-group">
+
+<div class="cal-toolbar">
+  <div class="cal-filters" role="group" aria-label="Filter by research direction">
+    <button type="button" class="cal-filter active" data-filter="all">All</button>
+    {%- for direction in directions %}
+    <button type="button" class="cal-filter" data-filter="{{ direction | slugify }}">{{ direction }}</button>
+    {%- endfor %}
+  </div>
+  <button type="button" class="cal-print-btn" title="Print the calendar, or save it as a landscape PDF" aria-label="Print the calendar, or save it as a PDF">
+    <i class="fa-solid fa-print" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div class="cal-print-area">
+
+<div class="cal-scroll">
+  <table class="cal-table">
+    <colgroup>
+      <col class="cal-col-direction">
+      {%- for month in months %}
+      <col{% if month == "Jan" %} class="cal-col-jan"{% endif %}>
+      {%- endfor %}
+    </colgroup>
+    <thead>
+      <tr class="cal-groups">
+        <th class="cal-corner"></th>
+        <th class="cal-group cal-g1 cal-group-start" colspan="4">Sept. – Dec.</th>
+        <th class="cal-group cal-g2 cal-group-start" colspan="1">Jan.</th>
+        <th class="cal-group cal-g3 cal-group-start" colspan="4">Feb. – May</th>
+        <th class="cal-group cal-g4 cal-group-start" colspan="3">Jun. – Aug.</th>
+      </tr>
+      <tr class="cal-months">
+        <th class="cal-corner"></th>
+        {%- for month in months %}
+        <th class="cal-month cal-g{{ month_groups[forloop.index0] }}{% if group_starts[forloop.index0] == '1' %} cal-group-start{% endif %}">{{ month_names[forloop.index0] }}</th>
+        {%- endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {%- for direction in directions %}
+      <tr data-direction="{{ direction | slugify }}">
+        <th class="cal-direction" scope="row">{{ direction }}</th>
+        {%- for month in months -%}
+          {%- assign deadlines = site.data.conferences | where: "direction", direction | where: "deadline", month -%}
+          {%- assign occurrences = site.data.conferences | where: "direction", direction | where: "occurs", month -%}
+          <td class="cal-cell cal-g{{ month_groups[forloop.index0] }}{% if group_starts[forloop.index0] == '1' %} cal-group-start{% endif %}" data-month="{{ month_names[forloop.index0] }}">{%- for conf in deadlines -%}<span class="cal-badge cal-badge--deadline" title="{{ conf.name }}: submission deadline">{{ conf.acronym | replace: "+", "+<wbr>" }}</span>{%- endfor -%}{%- for conf in occurrences -%}<span class="cal-badge cal-badge--occurs" title="{{ conf.name }}: conference">{{ conf.acronym | replace: "+", "+<wbr>" }}</span>{%- endfor -%}</td>
+        {%- endfor %}
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>
+
+<ul class="cal-legend">
+  <li><span class="cal-badge cal-badge--deadline">CDC</span> submission deadline</li>
+  <li><span class="cal-badge cal-badge--occurs">CDC</span> conference takes place</li>
+  <li class="cal-legend-note">(…) not held every year</li>
+</ul>
+</div>{%- comment %} .cal-print-area {% endcomment %}
+
+</div>{%- comment %} .cal-filter-group {% endcomment %}

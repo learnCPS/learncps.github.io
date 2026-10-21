@@ -1,0 +1,88 @@
+"Under Review":
+  url: 
+  color: "#494F55"
+
+"CDC":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000188/all-proceedings
+  color: "#00369f"
+
+"ACC":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000030/all-proceedings
+  color: "#00369f"
+
+"IFAC WC":
+  url: https://www.sciencedirect.com/journal/ifac-papersonline
+  color: "#00369f"
+
+"ITSC":
+  url: https://ieee-itss.org/conf/itsc/
+  color: "#00369f"
+
+"MED":
+  url: https://www.med-control.org/main/conferences/
+  color: "#00369f"
+
+"MTNS":
+  url: https://mtns2020.eng.cam.ac.uk/
+  color: "#00369f"
+
+"GameSec":
+  url: https://link.springer.com/conference/gamesec
+  color: "#00369f"
+
+"IROS":
+  url: https://www.ieee-ras.org/conferences-workshops/financially-co-sponsored/iros
+  color: "#00369f"
+
+"ECC":
+  url: https://euca-ecc.org/ecc/
+  color: "#00369f"
+
+
+"ECML-PKDD":
+  url: https://link.springer.com/conference/ecml
+  color: "#00369f"
+
+"L4DC":
+  url: 
+  color: "#00369f"
+
+
+
+
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#494F55"
+
+"TAC":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=9
+
+"TNNLS":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385
+
+"TCNS":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6509490
+
+"Cybernetics":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036
+
+"PAFA":
+  
+"NAHS":
+  url: https://www.sciencedirect.com/journal/nonlinear-analysis-hybrid-systems
+  
+
+
+"Book":
+  url:
+  color: "#f29105"
+
+"Patent":
+  url: 
+  color: "#3fcbff"
+
+
+
+
+
