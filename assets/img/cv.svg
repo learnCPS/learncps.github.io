@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#21729f" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+  <!-- page outline with a gap on the left edge, and folded top-right corner -->
+  <path d="M75 155v290a45 45 0 0 0 45 45h275a45 45 0 0 0 45-45V118L330 15H125a50 50 0 0 0-50 50v35" fill="#fff"/>
+  <path d="M75 125v5"/>
+  <path d="M330 15v55a48 48 0 0 0 48 48h62z" fill="#8dd5ee"/>
+  <!-- "CV" -->
+  <path d="M232 68a32 32 0 1 0 0 46"/>
+  <path d="M260 60l21 65 21-65"/>
+  <!-- photo -->
+  <circle cx="175" cy="210" r="37" fill="#8dd5ee"/>
+  <rect x="117" y="260" width="116" height="40" rx="20" fill="#8dd5ee"/>
+  <!-- text lines -->
+  <path d="M265 195h50M265 245h115M265 295h130M117 345h58M215 345h180M117 395h58M215 395h180M117 445h58M215 445h180"/>
+</svg>
