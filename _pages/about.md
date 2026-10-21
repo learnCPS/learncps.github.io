@@ -13,6 +13,13 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons
 ---
 
+
+<p style="text-align: center; margin: -1.25rem 0 0;">
+  <img src="{{ '/assets/img/learnCPS-full-transparent.png' | relative_url }}" alt="learnCPS logo" class="learncps-logo logo-light" style="max-width: 250px; width: 100%; height: auto;">
+  <img src="{{ '/assets/img/learnCPS-full-night-transparent.png' | relative_url }}" alt="learnCPS logo" class="learncps-logo logo-dark" style="max-width: 250px; width: 100%; height: auto;">
+</p>
+
+
 <!-- <h2> About </h2> -->
 
 <figure class="pi-message">
