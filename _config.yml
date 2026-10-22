@@ -18,7 +18,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: learnCPS.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 logo: /assets/img/learnCPS-full-transparent.png # lab logo shown in the navbar (light mode)
 logo_dark: /assets/img/learnCPS-full-night-transparent.png # lab logo shown in the navbar (dark mode)
-logo_tagline: Learning for Cyber-Physical-Systems &middot; TU Wien # shown under the navbar logo; remove to go back to a plain navbar
+logo_strip: true # larger navbar logo on a coloured strip; set to false for a plain navbar
 
 url: https://learncps.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/

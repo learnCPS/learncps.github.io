@@ -9,7 +9,7 @@ nav_order: 5
 ---
 
 <p style="text-align: justify;">
-If you are interested in joining <span class="learncps-wordmark"><span class="learn">learn</span><span class="cps">CPS</span></span>, send us an email at <span style="font-family: monospace;">christos.mavridis [at] tuwien.ac.at</span>.
+If you are interested in joining <span class="learncps-wordmark"><span class="learn">Learn</span><span class="cps">CPS</span></span>, send us an email at <span style="font-family: monospace;">christos.mavridis [at] tuwien.ac.at</span>.
 <br>
 Use title <span style="font-family: monospace;">"Interest in joining learnCPS"</span> and include:
 </p>

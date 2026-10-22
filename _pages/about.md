@@ -18,6 +18,9 @@ social: false  # includes social icons
   <img src="{{ '/assets/img/learnCPS-full-transparent.png' | relative_url }}" alt="learnCPS logo" class="learncps-logo logo-light" style="max-width: 250px; width: 100%; height: auto;">
   <img src="{{ '/assets/img/learnCPS-full-night-transparent.png' | relative_url }}" alt="learnCPS logo" class="learncps-logo logo-dark" style="max-width: 250px; width: 100%; height: auto;">
 </p>
+<p class="about-tagline" style="text-align: center;">Learning for Cyber-Physical-Systems &middot; TU Wien</p>
+
+<hr class="about-separator">
 
 
 <!-- <h2> About </h2> -->
@@ -30,13 +33,13 @@ social: false  # includes social icons
     </a>
     <span class="pi-message-signature">
       <a href="{{ '/people/' | relative_url }}">Asst. Prof. Christos Mavridis</a>
-      <span class="pi-message-role">Principal Investigator, <span class="learncps-wordmark"><span class="learn">learn</span><span class="cps">CPS</span></span> lab </span>
+      <span class="pi-message-role">Principal Investigator, <span class="learncps-wordmark"><span class="learn">Learn</span><span class="cps">CPS</span></span> lab </span>
     </span>
   </figcaption>
 </figure>
 
 
 <p style="text-align: center;">
-  <img src="{{ '/assets/img/learncps-topics.png' | relative_url }}" alt="learnCPS research topics" class="logo-light" style="max-width: 720px; width: 100%; height: auto; background-color: #ffffff; border-radius: 1rem; padding: 1rem;">
-  <img src="{{ '/assets/img/learncps-topics.png' | relative_url }}" alt="learnCPS research topics" class="logo-dark" style="max-width: 720px; width: 100%; height: auto; background-color: #c4c4c4; border-radius: 1rem; padding: 1rem;">
+  <img src="{{ '/assets/img/learncps-topics.png' | relative_url }}" alt="learnCPS research topics" class="logo-light" style="max-width: 820px; width: 100%; height: auto; background-color: #ffffff; border-radius: 1rem; padding: 1rem;">
+  <img src="{{ '/assets/img/learncps-topics.png' | relative_url }}" alt="learnCPS research topics" class="logo-dark" style="max-width: 820px; width: 100%; height: auto; background-color: #c4c4c4; border-radius: 1rem; padding: 1rem;">
 </p>

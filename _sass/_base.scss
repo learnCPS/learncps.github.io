@@ -264,9 +264,21 @@ html[data-theme="dark"] .about-hero {
 .about-tagline {
   font-variant: small-caps;
   letter-spacing: 0.08em;
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--global-text-color-light);
   margin: 0;
+}
+
+// Short, discreet divider between the home-page header and content
+.about-separator {
+  width: 3.5rem;
+  margin: 1.5rem auto 1.75rem;
+  border: 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+html[data-theme="dark"] .about-tagline {
+  color: #b8cbe0;
 }
 
 @media (max-width: 576px) {
@@ -276,7 +288,7 @@ html[data-theme="dark"] .about-hero {
   }
 
   .about-tagline {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     letter-spacing: 0.04em;
   }
 }
@@ -513,7 +525,7 @@ html[data-theme="dark"] .about-hero {
   opacity: 0.95;
 }
 
-// Navbar as the logo strip (enabled by site.logo_tagline)
+// Navbar as the logo strip (enabled by site.logo_strip)
 .navbar:has(.navbar-brand-strip) {
   background-color: #edf3f9;
   border-bottom: none;
@@ -533,29 +545,12 @@ html[data-theme="dark"] .navbar:has(.navbar-brand-strip) {
   .navbar-logo {
     height: 2.75rem;
   }
-
-  .navbar-tagline {
-    font-variant: small-caps;
-    letter-spacing: 0.06em;
-    font-size: 0.68rem;
-    color: var(--global-text-color-light);
-    margin-top: 0.1rem;
-  }
-}
-
-html[data-theme="dark"] .navbar-brand-strip .navbar-tagline {
-  color: #b8cbe0;
 }
 
 @media (max-width: 576px) {
   .navbar .navbar-brand-strip {
     .navbar-logo {
       height: 2.25rem;
-    }
-
-    .navbar-tagline {
-      font-size: 0.58rem;
-      letter-spacing: 0.03em;
     }
   }
 }

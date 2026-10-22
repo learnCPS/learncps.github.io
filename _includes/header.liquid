@@ -3,13 +3,12 @@
   <nav id="navbar" class="navbar navbar-light navbar-expand-lg {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {% if page.permalink != '/' or site.logo %}
-        <a class="navbar-brand title font-weight-lighter{% if site.logo_tagline %} navbar-brand-strip{% endif %}" href="{{ site.baseurl }}/" title="{{ site.title }}">
+        <a class="navbar-brand title font-weight-lighter{% if site.logo_strip %} navbar-brand-strip{% endif %}" href="{{ site.baseurl }}/" title="{{ site.title }}">
           {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" class="navbar-logo learncps-logo{% if site.logo_dark %} logo-light{% endif %}">
             {% if site.logo_dark %}
               <img src="{{ site.logo_dark | relative_url }}" alt="{{ site.title }}" class="navbar-logo learncps-logo logo-dark">
             {% endif %}
-            {% if site.logo_tagline %}<span class="navbar-tagline">{{ site.logo_tagline }}</span>{% endif %}
           {% elsif site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
