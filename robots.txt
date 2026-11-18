@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://learncps.github.io/sitemap.xml
+Sitemap: https://learncps.eu/sitemap.xml
